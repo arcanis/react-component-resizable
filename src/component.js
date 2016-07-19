@@ -105,7 +105,7 @@ var Resizable = React.createClass({
               React.createElement('div', {className: this.props.contractClass, ref: 'contract', key: 'contract'})
             ]
           ),
-          this.props.embedCss ? React.createElement('style', {key: 'embededCss', dangerouslySetInnerHTML: {__html: '.resize-triggers { visibility: hidden; } .resize-triggers, .resize-trigge$
+          this.props.embedCss ? React.createElement('style', {key: 'embededCss', dangerouslySetInnerHTML: {__html: '.resize-triggers { visibility: hidden; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: \" \"; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }'}}) : null
         ]
       )
     );
