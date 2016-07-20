@@ -90,7 +90,7 @@ var Resizable = React.createClass({
     var internalPropNames = Object.keys(Resizable.propTypes);
 
     for (var t = 0; t < propNames.length; ++t)
-      if (internalPropNames.indexOf(propNames[t]) !== -1)
+      if (internalPropNames.indexOf(propNames[t]) === -1)
         rest[propNames[t]] = this.props[propNames[t]];
 
     var forwardedProps = objectAssign({}, rest, {onScroll: this.onScroll, ref: 'resizable'});
